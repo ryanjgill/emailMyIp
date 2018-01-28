@@ -16,10 +16,10 @@ const transporter = nodemailer.createTransport({
 });
 
 const mailOptions = {
-  from: config.email, // sender address
-  to: config.email, // list of receivers
-  subject: 'Device Ip', // Subject line
-  html: `<p>${name} <a href="http://${address}:3000">${address}</a> </p>`// plain text body
+  from: config.email,
+  to: config.email,
+  subject: 'Device Ip',
+  html: `<p>${name} <a href="http://${address}:3000">${address}</a> </p>`
 };
 
 transporter.sendMail(mailOptions, function (err, info) {
