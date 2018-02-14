@@ -13,18 +13,18 @@ const transporter = nodemailer.createTransport({
     user: config.email,
     pass: config.password
   }
-});
+})
 
 const mailOptions = {
   from: config.email,
   to: config.email,
   subject: 'Device Ip',
   html: `<p>${name} <a href="http://${address}:3000">${address}</a> </p>`
-};
+}
 
 transporter.sendMail(mailOptions, function (err, info) {
   if(err) console.log(err)
   
-  console.log(info);
+  console.log(info)
   process.exit()
-});
+})
